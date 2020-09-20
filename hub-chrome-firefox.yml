@@ -1,7 +1,7 @@
 version: '3'
 services:
   seleniumChrome:
-    image: minium/selenium-grid-extras-chrome:2.0.4
+    image: shiweiwei97/selenium-grid-extras-chrome:3.8.1-2.0.4-85.0
     container_name: selenium-grid-extras-chrome
     restart: unless-stopped
     shm_size: 2g
@@ -14,11 +14,11 @@ services:
       - JAVA_OPTS=-Xms512m -Xmx512m
       - DBUS_SESSION_BUS_ADDRESS=/dev/null
     volumes:
-       - /dev/shm:/dev/shm 
+      - /dev/shm:/dev/shm
 #       - ./custom_grid_config.json:/opt/selenium/selenium_grid_extras_config.json
 #       - ./custom_node_config.json:/opt/selenium/node_5555.json
   seleniumFirefox:
-    image: minium/selenium-grid-extras-firefox:2.0.4
+    image: shiweiwei97/selenium-grid-extras-firefox:3.8.1-2.0.4-80.0
     container_name: selenium-grid-extras-firefox
     restart: unless-stopped
     shm_size: 2g
@@ -33,7 +33,7 @@ services:
 #       - ./custom_grid_config.json:/opt/selenium/selenium_grid_extras_config.json
 #       - ./custom_node_config.json:/opt/selenium/node_5555.json
   seleniumHub:
-    image: minium/selenium-grid-extras-hub:2.0.4
+    image: shiweiwei97/selenium-grid-extras-hub:2.0.4
     container_name: selenium-grid-extras-hub
     restart: unless-stopped
     ports:
@@ -41,7 +41,7 @@ services:
       - "3000:3000"
     environment:
       - JAVA_OPTS=-Xms512m -Xmx512m
-#     - SE_OPTS=-debug true      
+#     - SE_OPTS=-debug true
 #    volumes:
 #       - ./custom_grid_config.json:/opt/selenium/selenium_grid_extras_config.json
 #       - ./custom_hub_config.json:/opt/selenium/hub_4444.json

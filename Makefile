@@ -1,4 +1,4 @@
-NAME := minium/selenium-grid-extras
+NAME := shiweiwei97/selenium-grid-extras
 SELENIUM_VERSION := $(SELENIUM_VERSION)
 SELENIUM_GRID_EXTRAS_VERSION := $(SELENIUM_GRID_EXTRAS_VERSION)
 CHROME_VERSION := $(CHROME_VERSION)
@@ -8,13 +8,13 @@ all: hub chrome firefox
 
 build: all
 
-hub: 
+hub:
 			cd ./Hub && SELENIUM_GRID_EXTRAS_VERSION=$(SELENIUM_GRID_EXTRAS_VERSION) docker-compose build --no-cache
 
-nodebase: 
+nodebase:
 			cd ./NodeBase && SELENIUM_GRID_EXTRAS_VERSION=$(SELENIUM_GRID_EXTRAS_VERSION) docker-compose build --no-cache
 
-chrome: 
+chrome:
 			cd ./NodeChrome && docker-compose build --no-cache
 
 firefox:

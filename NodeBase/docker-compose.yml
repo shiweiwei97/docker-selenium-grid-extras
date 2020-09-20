@@ -1,8 +1,8 @@
 version: '3'
 services:
   seleniumhub:
-    image: minium/selenium-grid-extras-base:2.0.4
-    build: 
+    image: shiweiwei97/selenium-grid-extras-base:2.0.4
+    build:
       context: .
-      args: 
+      args:
         - SELENIUM_GRID_EXTRAS_VERSION

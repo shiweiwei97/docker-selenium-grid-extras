@@ -1,10 +1,10 @@
 version: '3'
 services:
   seleniumhub:
-    image: minium/selenium-grid-extras-hub:2.0.4
-    build: 
+    image: shiweiwei97/selenium-grid-extras-hub:2.0.4
+    build:
       context: .
-      args: 
+      args:
         - SELENIUM_GRID_EXTRAS_VERSION
     container_name: selenium-grid-extras-hub
     restart: unless-stopped
